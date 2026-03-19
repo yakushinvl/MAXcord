@@ -1,0 +1,121 @@
+.custom-dialog-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: dialogOverlayIn 0.2s ease-out;
+}
+
+@keyframes dialogOverlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.custom-dialog-container {
+    background: #1e1f22;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: dialogPopIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes dialogPopIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.custom-dialog-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.custom-dialog-message {
+    color: #b9bbbe;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.custom-dialog-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 24px;
+    background: #202225;
+    border: 1px solid #1a1a24;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.custom-dialog-input:focus {
+    outline: none;
+    border-color: var(--primary-neon, #00e5ff);
+}
+
+.custom-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.custom-dialog-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.custom-dialog-button.cancel {
+    background: transparent;
+    color: #b9bbbe;
+}
+
+.custom-dialog-button.cancel:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.custom-dialog-button.confirm {
+    background: #ed4245;
+    /* Red for destructive actions usually, but we can make it primary color too */
+    color: white;
+}
+
+.custom-dialog-button.confirm:hover {
+    background: #c9383b;
+}
+
+.custom-dialog-button.confirm.alert-only {
+    background: var(--primary-neon, #00e5ff);
+    color: #000;
+}
+
+.custom-dialog-button.confirm.alert-only:hover {
+    background: var(--secondary-neon, #a155ff);
+}
