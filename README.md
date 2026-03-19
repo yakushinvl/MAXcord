@@ -1,4 +1,4 @@
-# <img src="client/public/icon.png" width="48" align="center" /> maxcord
+# <img src="client/public/logo_256x256.png" width="48" align="center" /> maxcord
 
 **maxcord** — это современная и высокопроизводительная коммуникационная платформа реального времени, вдохновленная Discord, но с упором на премиальный дизайн и расширенные возможности аудио-захвата.
 
