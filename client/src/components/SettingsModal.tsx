@@ -501,46 +501,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
         />
       </div>
 
-      <div className="settings-section-block">
-        <h3>Иконка приложения</h3>
-        <div className="app-icon-grid">
-          <div
-            className={`app-icon-option ${appIcon === 'default' ? 'active' : ''}`}
-            onClick={() => setAppIcon('default')}
-          >
-            <img src="icon.png" alt="По умолчанию" />
-            <span>Стандартная</span>
-          </div>
-          <div
-            className={`app-icon-option ${appIcon === 'icon1' ? 'active' : ''}`}
-            onClick={() => setAppIcon('icon1')}
-          >
-            <img src="icon1.PNG" alt="Вариант 1" />
-            <span>Неон</span>
-          </div>
-          <div
-            className={`app-icon-option ${appIcon === 'icon2' ? 'active' : ''}`}
-            onClick={() => setAppIcon('icon2')}
-          >
-            <img src="icon2.png" alt="Вариант 2" />
-            <span>Лазурь</span>
-          </div>
-          <div
-            className={`app-icon-option ${appIcon === 'icon3' ? 'active' : ''}`}
-            onClick={() => setAppIcon('icon3')}
-          >
-            <img src="icon3.png" alt="Вариант 3" />
-            <span>Аметист</span>
-          </div>
-          <div
-            className={`app-icon-option ${appIcon === 'icon4' ? 'active' : ''}`}
-            onClick={() => setAppIcon('icon4')}
-          >
-            <img src="icon4.png" alt="Космос" />
-            <span>Космос</span>
-          </div>
-        </div>
-      </div>
+      {/* Иконка приложения секция удалена по просьбе пользователя */}
 
       <div className="settings-section-block">
         <h3>Производительность</h3>

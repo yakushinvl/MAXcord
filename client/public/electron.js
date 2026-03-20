@@ -130,7 +130,7 @@ if (!app.requestSingleInstanceLock()) {
 }
 
 function createTray() {
-    const iconPath = path.join(__dirname, 'app_icon.ico');
+    const iconPath = path.join(__dirname, 'icon.ico');
     const trayIcon = nativeImage.createFromPath(iconPath);
     tray = new Tray(trayIcon);
     updateTrayMenu();
@@ -170,7 +170,7 @@ function updateTrayStatus(state) {
     if (!tray) return;
     currentVoiceState = state;
     const { isMuted, isDeafened, isConnected } = state;
-    let iconName = 'app_icon.ico';
+    let iconName = 'icon.ico';
     let statusText = 'maxcord - В сети';
 
     if (isDeafened) {
@@ -267,7 +267,7 @@ function createWindow() {
         autoHideMenuBar: true,
         frame: false,
         backgroundColor: '#1e1f22',
-        icon: path.join(__dirname, 'app_icon.ico'),
+        icon: path.join(__dirname, 'icon.ico'),
         show: false // Performance: Use ready-to-show to prevent white flash
     });
     mainWindow.once('ready-to-show', () => {
@@ -666,15 +666,8 @@ scanActivities();
 ipcMain.handle('get-current-activity', () => lastActivity ? { ...lastActivity, startTime: activityStartTime } : null);
 
 ipcMain.on('change-icon', (event, iconName) => {
-    let iconFile = 'app_icon.ico';
-    switch (iconName) {
-        case 'icon1': iconFile = 'icon1.PNG'; break;
-        case 'icon2': iconFile = 'icon2.png'; break;
-        case 'icon3': iconFile = 'icon3.png'; break;
-        case 'icon4': iconFile = 'icon4.png'; break;
-        default: iconFile = 'app_icon.ico'; break;
-    }
-    const iconPath = path.join(__dirname, iconFile);
+    // Эта функция отключена, так как пользователь запретил менять иконку
+    const iconPath = path.join(__dirname, 'icon.ico');
     try {
         if (!fs.existsSync(iconPath)) return;
         const iconImage = nativeImage.createFromPath(iconPath);
