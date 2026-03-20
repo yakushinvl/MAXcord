@@ -1,8 +1,8 @@
 {
   "name": "maxcord-client",
-  "version": "1.3.13",
+  "version": "1.3.15",
   "private": true,
-  "author": "pkda1lu",
+  "author": "yakushinvl",
   "description": "maxcord - Real-time communication platform",
   "dependencies": {
     "axios": "^1.6.2",
@@ -33,15 +33,15 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "pkda1lu",
-        "repo": "maxcord",
+        "owner": "yakushinvl",
+        "repo": "MAXcord",
         "releaseType": "release"
       }
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pkda1lu/maxcord.git"
+    "url": "https://github.com/yakushinvl/MAXcord.git"
   },
   "scripts": {
     "dev": "vite",

@@ -100,7 +100,7 @@ function saveWindowState() {
 
 autoUpdater.autoDownload = true;
 autoUpdater.autoInstallOnAppQuit = true;
-autoUpdater.setFeedURL({ provider: 'github', owner: 'yakushinvl', repo: 'maxcord' });
+autoUpdater.setFeedURL({ provider: 'github', owner: 'yakushinvl', repo: 'MAXcord' });
 
 if (process.defaultApp) {
     if (process.argv.length >= 2) app.setAsDefaultProtocolClient('maxcord', process.execPath, [path.resolve(process.argv[1])]);
