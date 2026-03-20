@@ -133,7 +133,7 @@ const InvitePage: React.FC = () => {
                                             Открыть в приложении
                                         </button>
                                         <button style={{ background: 'transparent', border: 'none', color: 'var(--text-dim)', fontSize: '13px', cursor: 'pointer', textDecoration: 'underline' }} onClick={() => window.open('https://github.com/yakushinvl/maxcord/releases', '_blank')}>
-                                            Установить maxcord
+                                            Установить MAXCORD
                                         </button>
                                     </>
                                 ) : (
@@ -148,7 +148,7 @@ const InvitePage: React.FC = () => {
             </div>
 
             <div style={{ position: 'absolute', bottom: '30px', left: '0', width: '100%', textAlign: 'center', fontSize: '12px', color: 'rgba(255,255,255,0.2)', letterSpacing: '1px' }}>
-                maxcord
+                MAXCORD
             </div>
         </div>
     );

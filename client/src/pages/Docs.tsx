@@ -10,8 +10,8 @@ const Docs: React.FC = () => {
         <div className="docs-container">
             <nav className="docs-nav">
                 <div className="nav-logo" onClick={() => navigate('/')}>
-                    <img src="/icon.png" alt="Maxcord" />
-                    <span>Maxcord Docs</span>
+                    <img src="/logo_256x256.png" alt="MAXCORD" />
+                    <span>MAXCORD Docs</span>
                 </div>
                 <button className="btn-back" onClick={() => navigate('/')}>На главную</button>
             </nav>
@@ -35,12 +35,12 @@ const Docs: React.FC = () => {
                 <main className="docs-main">
                     {activeTab === 'general' ? (
                         <div className="docs-content">
-                            <h1>Документация Maxcord</h1>
-                            <p className="lead">Maxcord — это современная платформа для общения, стриминга и совместного проведения времени.</p>
+                            <h1>Документация MAXCORD</h1>
+                            <p className="lead">MAXCORD — это современная платформа для общения, стриминга и совместного проведения времени.</p>
 
                             <section>
                                 <h2>🚀 Начало работы</h2>
-                                <p>Чтобы начать пользоваться Maxcord, зарегистрируйтесь или войдите в свою учетную запись. Вы можете использовать веб-версию или скачать клиент для Windows.</p>
+                                <p>Чтобы начать пользоваться MAXCORD, зарегистрируйтесь или войдите в свою учетную запись. Вы можете использовать веб-версию или скачать клиент для Windows.</p>
                                 <ul>
                                     <li><strong>Серверы:</strong> Основное место для общения. Вы можете создать свой сервер или присоединиться к существующему по ссылке-приглашению.</li>
                                     <li><strong>Каналы:</strong> На каждом сервере есть Текстовые и Голосовые каналы.</li>
@@ -50,7 +50,7 @@ const Docs: React.FC = () => {
 
                             <section>
                                 <h2>🎧 Голосовое общение и Стриминг</h2>
-                                <p>Maxcord поддерживает высококачественный звук и передачу видео в 4K.</p>
+                                <p>MAXCORD поддерживает высококачественный звук и передачу видео в 4K.</p>
                                 <ul>
                                     <li><strong>Шумоподавление:</strong> Встроено по умолчанию для кристальной чистоты звука.</li>
                                     <li><strong>Демонстрация экрана:</strong> Стримить можно как весь экран, так и отдельное окно приложения.</li>
@@ -66,7 +66,7 @@ const Docs: React.FC = () => {
                     ) : (
                         <div className="docs-content">
                             <h1>API для ботов (Webhooks & Sockets)</h1>
-                            <p className="lead">Вы можете создавать своих ботов для maxcord, используя наш простой SDK на основе Socket.io и Webhooks.</p>
+                            <p className="lead">Вы можете создавать своих ботов для MAXCORD, используя наш простой SDK на основе Socket.io и Webhooks.</p>
 
                             <section>
                                 <h2>🔑 Авторизация</h2>
@@ -106,7 +106,7 @@ const Docs: React.FC = () => {
 
                             <section>
                                 <h2>🎤 Работа с Голосом и Живой Поток</h2>
-                                <p>Maxcord использует RTC-узлы для передачи звука. Рекомендуется использовать официальный LiveKit SDK для Node.js для подключения к голосовым каналам.</p>
+                                <p>MAXCORD использует RTC-узлы для передачи звука. Рекомендуется использовать официальный LiveKit SDK для Node.js для подключения к голосовым каналам.</p>
                                 <div className="code-block">
                                     <pre>{`// Пример подключения к голосовому каналу (Node.js)
 const { Room, AudioSource, LocalAudioTrack } = require("@livekit/rtc-node");
