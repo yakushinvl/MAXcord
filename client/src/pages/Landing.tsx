@@ -24,8 +24,8 @@ const Landing: React.FC = () => {
 
             <nav className="landing-nav">
                 <div className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    <img src="/icon.png" alt="maxcord" />
-                    <span>maxcord</span>
+                    <img src="/logo-trans_256x256.png" alt="MAXCORD" />
+                    <span>MAXCORD</span>
                 </div>
                 <div className="nav-links">
                     <span className="nav-link" onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}>Возможности</span>
@@ -34,12 +34,12 @@ const Landing: React.FC = () => {
                 </div>
                 <div className="nav-actions">
                     {!user && (
-                        <button className="btn-secondary nav-desktop-only" style={{ padding: '8px 20px', fontSize: '14px' }} onClick={() => { window.location.href = 'maxcord://'; }}>
-                            Запустить maxcord
+                        <button className="btn-secondary nav-desktop-only" style={{ padding: '8px 20px', fontSize: '14px' }} onClick={() => { window.location.href = 'MAXCORD://'; }}>
+                            Запустить MAXCORD
                         </button>
                     )}
                     <button className="btn-login" onClick={() => navigate('/login')}>
-                        {user ? 'Открыть maxcord' : 'Войти'}
+                        {user ? 'Открыть MAXCORD' : 'Войти'}
                     </button>
                 </div>
             </nav>
@@ -50,7 +50,7 @@ const Landing: React.FC = () => {
                 <div className="hero-content">
                     <h1 className="hero-h1">Место, где можно отдохнуть.</h1>
                     <p className="hero-p">
-                        maxcord — это не просто чат. Это место, где вы можете проводить время с друзьями,
+                        MAXCORD — это не просто чат. Это место, где вы можете проводить время с друзьями,
                         делиться игровыми моментами в 4K и кристально чистым звуком.
                         Всегда вместе, даже если вы далеко.
                     </p>
@@ -60,7 +60,7 @@ const Landing: React.FC = () => {
                             Загрузить для Windows
                         </button>
                         <button className="btn-primary" onClick={handleOpenApp}>
-                            Открыть maxcord в браузере
+                            Открыть MAXCORD в браузере
                         </button>
                     </div>
                 </div>
@@ -97,13 +97,13 @@ const Landing: React.FC = () => {
                     <div className="showcase-text">
                         <h2>Создайте свой мир.</h2>
                         <p>
-                            Серверы maxcord позволяют организовать пространство так, как удобно вам.
+                            Серверы MAXCORD позволяют организовать пространство так, как удобно вам.
                             Создавайте роли, настраивайте права доступа и делайте свой сервер уникальным.
                         </p>
                         <button className="btn-secondary" onClick={() => navigate('/register')}>Присоединиться сейчас</button>
                     </div>
                     <div className="showcase-image">
-                        <img src="/landing_hero.png" alt="maxcord Interface" onError={(e) => {
+                        <img src="/landing_hero.png" alt="MAXCORD Interface" onError={(e) => {
                             e.currentTarget.src = 'https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1200';
                         }} />
                     </div>
@@ -113,7 +113,7 @@ const Landing: React.FC = () => {
             <section className="cta-section" id="download">
                 <div className="cta-card">
                     <h2>Готовы начать свое общение?</h2>
-                    <p>Более 100,000 пользователей уже выбрали maxcord как основной инструмент для связи.</p>
+                    <p>Более 100,000 пользователей уже выбрали MAXCORD как основной инструмент для связи.</p>
                     <button className="btn-login" style={{ padding: '16px 48px', fontSize: '18px' }} onClick={() => navigate('/register')}>
                         Зарегистрироваться
                     </button>
@@ -123,15 +123,14 @@ const Landing: React.FC = () => {
             <footer id="support">
                 <div className="footer-content">
                     <div className="footer-brand">
-                        <h4>maxcord</h4>
-                        <p>© 2026 maxcord Platform. Все права защищены.</p>
+                        <h4>MAXCORD</h4>
                     </div>
                     <div className="footer-links">
                         <div className="footer-column">
                             <h5>Продукт</h5>
                             <ul>
                                 <li><a onClick={() => navigate('/login')}>Безопасность</a></li>
-                                <li><a onClick={() => window.open('https://github.com/yakushinvl/maxcord', '_blank')}>Обновления</a></li>
+                                <li><a onClick={() => window.open('https://github.com/yakushinvl/MAXCORD', '_blank')}>Обновления</a></li>
                                 <li><a onClick={() => navigate('/register')}>Сервера</a></li>
                             </ul>
                         </div>
@@ -140,13 +139,12 @@ const Landing: React.FC = () => {
                             <ul>
                                 <li><a onClick={() => navigate('/')}>О нас</a></li>
                                 <li><a onClick={() => document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' })}>Загрузить</a></li>
-                                <li><a onClick={() => window.open('https://github.com/yakushinvl/maxcord', '_blank')}>Github</a></li>
+                                <li><a onClick={() => window.open('https://github.com/yakushinvl/MAXCORD', '_blank')}>Github</a></li>
                             </ul>
                         </div>
                         <div className="footer-column">
                             <h5>Ресурсы</h5>
                             <ul>
-                                <li><a onClick={() => window.open('https://t.me/maxcord_support', '_blank')}>Поддержка</a></li>
                                 <li><a onClick={() => navigate('/docs')}>Для разработчиков</a></li>
                                 <li><a onClick={() => navigate('/policy')}>Условия использования</a></li>
                             </ul>
