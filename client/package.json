@@ -9,9 +9,9 @@
     "electron-is-dev": "^2.0.0",
     "electron-log": "^5.4.3",
     "electron-updater": "^6.6.2",
+    "maxcord-native-audio": "file:./native-audio",
     "react-syntax-highlighter": "^16.1.1",
-    "tenorjs": "^1.0.10",
-    "maxcord-native-audio": "file:./native-audio"
+    "tenorjs": "^1.0.10"
   },
   "main": "public/electron.js",
   "homepage": "./",
