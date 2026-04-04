@@ -196,14 +196,6 @@ const Login: React.FC = () => {
                     placeholder="••••••••"
                     required
                   />
-                  <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
-                    <span
-                      onClick={() => handleModeChange('forgot')}
-                      style={{ fontSize: '12px', color: '#ffffff', cursor: 'pointer', fontWeight: 600, display: 'inline-block', padding: '4px' }}
-                    >
-                      Забыли пароль?
-                    </span>
-                  </div>
                 </div>
               </>
             )}
