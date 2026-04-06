@@ -21,12 +21,15 @@ const ScreenSourceSelector: React.FC<ScreenSourceSelectorProps> = ({ onSelect, o
     const [selectedSourceId, setSelectedSourceId] = useState<string | null>(null);
     const [resolution, setResolution] = useState('720');
     const [frameRate, setFrameRate] = useState('30');
+    const [electronUnavailable, setElectronUnavailable] = useState(false);
 
     useEffect(() => {
         const fetchSources = async () => {
             const electron = (window as any).electron;
             if (!electron || !electron.getDesktopSources) {
                 console.warn('Electron desktopCapturer is not available yet.');
+                setElectronUnavailable(true);
+                setLoading(false);
                 return;
             }
 
@@ -45,20 +48,49 @@ const ScreenSourceSelector: React.FC<ScreenSourceSelectorProps> = ({ onSelect, o
             }
         };
 
+        const electron = (window as any).electron;
+        if (!electron || !electron.getDesktopSources) {
+            setElectronUnavailable(true);
+            setLoading(false);
+            return;
+        }
+
         fetchSources();
         const interval = setInterval(fetchSources, 3000);
         return () => clearInterval(interval);
     }, [selectedTab]);
 
     const handleSelect = () => {
-        if (selectedSourceId) {
-            // Screen sharing on Windows: 
-            // Entire screen usually carries system audio.
-            // Individual windows usually don't carry audio unless it's a browser tab (not common for Electron yet).
-            // However, we will pass true for withAudio and handle it in the provider.
+        if (selectedSourceId && !electronUnavailable) {
             onSelect(selectedSourceId, { withAudio: true, resolution, frameRate });
         }
     };
+
+    const handleDownloadClick = () => {
+        window.open('https://github.com/yakushinvl/maxcord/releases', '_blank');
+    };
+
+    if (electronUnavailable) {
+        return (
+            <div className="screen-source-selector-overlay" onClick={onClose}>
+                <div className="screen-source-selector-modal" onClick={e => e.stopPropagation()}>
+                    <div className="screen-source-selector-header">
+                        <h2>Демонстрация экрана</h2>
+                        <button className="close-button" onClick={onClose}>&times;</button>
+                    </div>
+                    <div className="electron-unavailable-content">
+                        <div className="electron-unavailable-icon">🖥️</div>
+                        <p className="electron-unavailable-message">
+                            Демонстрация экрана пока доступна только в Windows приложении
+                        </p>
+                        <button className="download-button" onClick={handleDownloadClick}>
+                            Загрузить для Windows
+                        </button>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="screen-source-selector-overlay" onClick={onClose}>
